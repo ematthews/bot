@@ -5,6 +5,11 @@
   "author": "Eric Matthews <azymux@gmail.com>",
   "description": "Helpful robot",
   "dependencies": {
+    "cheerio": "0.19.0",
+    "flip": "0.1.1",
+    "htmlparser": "1.7.7",
+    "hubot-catfacts": "1.0.1",
+    "hubot-plusplus": "1.1.5",
     "hubot-maps": "0.0.2",
     "hubot-shipit": "~0.2.0",
     "hubot-help": "~0.1.1",
@@ -17,7 +22,9 @@
     "hubot-redis-brain": "0.0.3",
     "hubot-slack": "~3.3.0",
     "hubot-scripts": "~2.16.2",
-    "hubot": "~2.16.0"
+    "hubot": "~2.16.0",
+    "soupselect": "0.2.0",
+    "validator": "4.0.6"
   },
   "engines": {
     "node": "0.10.x"
