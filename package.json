@@ -1,8 +1,8 @@
 {
-  "name": "resbot",
+  "name": "bot",
   "version": "0.0.0",
   "private": true,
-  "author": "Eric Matthews <azymux@gmail.com>",
+  "author": "Eric Matthews <ematthews@users.noreply.github.com>",
   "description": "Helpful robot",
   "dependencies": {
     "cheerio": "0.19.0",
