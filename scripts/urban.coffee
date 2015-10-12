@@ -28,8 +28,8 @@ module.exports = (robot) ->
         msg.send "I don't know what \"#{msg.match[1]}\" is"
         return
       msg.send "#{entry.definition}"
-      if sounds and sounds.length
-        msg.send "#{sounds.join(' ')}"
+#      if sounds and sounds.length
+#        msg.send "#{sounds.join(' ')}"
 
 
   robot.respond /(urban)( define)?( example)?( me)? (.*)/i, (msg) ->
@@ -41,8 +41,8 @@ module.exports = (robot) ->
         msg.send "#{entry.example}"
       else
         msg.send "#{entry.definition}"
-      if sounds and sounds.length
-        msg.send "#{sounds.join(' ')}"
+#      if sounds and sounds.length
+#        msg.send "#{sounds.join(' ')}"
 
 urbanDict = (msg, query, callback) ->
   msg.http("http://api.urbandictionary.com/v0/define?term=#{escape(query)}")
