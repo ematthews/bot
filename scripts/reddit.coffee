@@ -44,3 +44,5 @@ module.exports = (robot)->
 
         break if count == top
 
+      if process.env.HUBOT_LIBRATO_RECORD_TOKEN
+        robot.emit 'librato_write:gauge', 'reddit_searches', message, count

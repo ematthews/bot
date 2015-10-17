@@ -12,6 +12,15 @@ has, etc!
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
+### Required Configurations
+
+The following variables need to be set!
+```
+heroku config:set HUBOT_SLACK_TOKEN=
+heroku config:set HUBOT_LIBRATO_USER=
+heroku config:set HUBOT_LIBRATO_TOKEN=
+heroku config:set HUBOT_LIBRATO_RECORD_TOKEN=
+```
 ### Running bot Locally
 
 You can test your hubot by running the following, however some plugins will not
