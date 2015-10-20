@@ -29,6 +29,9 @@ module.exports = (robot)->
     else
         top = requested
 
+    if top > 10
+        top = 10
+
     reddit  = "r/" + message.match[2] + ".json"
     location  = lookup_site + reddit
 
