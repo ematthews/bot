@@ -23,9 +23,13 @@ module.exports = (robot)->
       message.send text
 
   lookup_reddit = (message, response_handler)->
-    top     = parseInt message.match[3]
-    reddit  = "r/" + message.match[2] + ".json"
+    requested = parseInt message.match[3]
+    if isNaN(requested)
+        top = 1
+    else
+        top = requested
 
+    reddit  = "r/" + message.match[2] + ".json"
     location  = lookup_site + reddit
 
     message.http( location ).get() (error, response, body)->
@@ -44,5 +48,5 @@ module.exports = (robot)->
 
         break if count == top
 
-      if process.env.HUBOT_LIBRATO_RECORD_TOKEN
-        robot.emit 'librato_write:gauge', 'reddit_searches', message, count
+#      if process.env.HUBOT_LIBRATO_RECORD_TOKEN
+#        robot.emit 'librato_write:gauge', 'reddit_searches', message, count
