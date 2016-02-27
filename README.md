@@ -19,6 +19,7 @@ The following variables need to be set!
 heroku config:set HUBOT_SLACK_TOKEN=
 heroku config:set HUBOT_GOOGLE_CSE_ID=
 heroku config:set HUBOT_GOOGLE_CSE_KEY=
+heroku config:set HUBOT_BING_ACCOUNT_KEY=
 ```
 
 For Google image search, setup a search engine at https://cse.google.com/cse. The HUBOT_GOOGLE_CSE_ID value is available under Setup->Basics->Details->Search engine ID. Once the engine is setup, go to https://console.developers.google.com/apis/api/customsearch/ to setup an API key used for HUBOT_GOOGLE_CSE_KEY. Better instructions for this configuration can be found at https://github.com/hubot-scripts/hubot-google-images.
