@@ -8,7 +8,7 @@
 #   HUBOT_BING_ACCOUNT_KEY
 #
 # Commands:
-#   bing image <query> - Queries Bing Images for <query> & returns a random result from top 50
+#   image <query> - Queries Bing Images for <query> & returns a random result from top 50
 #
 # Author:
 #   Brandon Satrom
