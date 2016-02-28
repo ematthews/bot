@@ -18,14 +18,15 @@ unless bingAccountKey
   throw "You must set HUBOT_BING_ACCOUNT_KEY in your environment vairables"
 
 module.exports = (robot) ->
-  robot.hear /^bing( image)? (.*)/i, (msg) ->
-    imageMe msg, msg.match[2], (url) ->
+  #robot.hear /^bing( image)? (.*)/i, (msg) ->
+  robot.respond /(image|img)( me)? (.*)/i, (msg) ->
+    imageMe msg, msg.match[3], (url) ->
       msg.send url
 
 imageMe = (msg, query, cb) ->
   msg.http('https://api.datamarket.azure.com/Bing/Search/Image')
     .header("Authorization", "Basic " + new Buffer("#{bingAccountKey}:#{bingAccountKey}").toString('base64'))
-    .query(Query: "'" + query + "'", Adult: "off", $format: "json", $top: 50)
+    .query(Query: "'" + query + "'", "Adult": "'off'", $format: "json", $top: 50)
     .get() (err, res, body) ->
       try
         images = JSON.parse(body).d.results
