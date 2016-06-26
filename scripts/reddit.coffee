@@ -18,7 +18,7 @@ Select      = require( "soupselect" ).select
 lookup_site = "http://www.reddit.com/"
 
 module.exports = (robot)->
-  robot.respond /reddit( me)? ([a-z0-9\-_\.]+\/?[a-z0-9\-_\.]+)( [0-9]+)?/i, (message)->
+  robot.respond /reddit( me)? ([a-z0-9\+\-_\.]+\/?[a-z0-9\-_\.]+)( [0-9]+)?/i, (message)->
     lookup_reddit message, (text)->
       message.send text
 
